@@ -1,0 +1,159 @@
+/************************/
+/* FUENTES */
+/************************/
+
+body {
+    font-family: "Work Sans", "Helvetica", sans-serif;
+    font-size: 2vw;
+    letter-spacing: -1px;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 3vw;
+    letter-spacing: -1px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.signopeso {
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    padding: 0 0 0 20px;
+    font-size: 70%;
+    user-select: none;
+    color: white;
+}
+
+input{
+    padding-left: 3vw;
+}
+#iniciotabla{
+    font-size: 1.2vw;
+}
+
+#iniciotabla2{
+    font-size: 1.2vw;
+}
+
+#iniciotabla3{
+    font-size: 1.2vw;
+}
+
+#tabla{
+    font-size: 1.2vw;
+}
+
+#tabla2{
+    font-size: 1.2vw;
+}
+
+#tabla3{
+    font-size: 1.2vw;
+}
+
+input,
+select {
+    font: 300 50px "Work Sans", "Helvetica", sans-serif;
+    border: 0;
+    outline: none;
+    color: white;
+    background-color: #73ACDF;
+}
+
+.uno{
+    color: white;
+}
+
+
+
+/************************/
+/* GRIDS */
+/************************/
+
+#contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "uno uno"
+        "dos tres"
+        "cuatro tres";
+}
+
+.uno {
+    grid-area: uno;
+    grid-row-start: 1;
+    background-color: #02779E;
+    
+}
+
+.dos {
+    grid-area: dos;
+    grid-row-start: 2;
+    background-color: #4E9CB5;
+}
+
+.tres {
+    grid-area: tres;
+    grid-row-start: 2;
+    background-color: #5FA6BC;
+}
+
+.cuatro {
+    grid-area: cuatro;
+    grid-row-start: 3;
+    background-color:#3d93af;
+    ;
+}
+
+/************************/
+/* CONTENIDO */
+/************************/
+
+
+.decorrido {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dinero{
+    position: relative;
+}
+
+table{
+    border-color: white;
+    border: 1px;
+}
+
+.gap{
+    margin: 20px 20px 20px 20px;
+}
+
+#centre{
+    margin-left: auto;
+  margin-right: auto;
+  padding-top: 1vw;
+  font-size: 2vw;
+}
+
+th{
+    padding-right: 1vw;
+}
+
+#centre {
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: 300;
+  }
+  
+  #centre td, #centre th {
+    border: 2px solid #02779E;
+    padding: 8px;
+  }
+  
+  #centre tr:nth-child(even){background-color: #418ba3;}
+  
+  #centre tr:hover {background-color: #418ba3;}

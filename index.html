@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Metas SEO -->
+    <meta name="description"
+        content="Sobrevivir a Argentina Financieramente es posible si haces los calculos correctos">
+    <meta name="keywords" content="sobrevivir, Argentina, dinero, ahorrar, dolares, pesos">
+    <meta name="author" content="Kian Afsharinejad">
+
+    <!-- Titulo página -->
+    <title>Survive in Argentina</title>
+</head>
+
+<body>
+
+    <div id="contenedor-grid">
+
+        <div class="uno">
+
+            <h1>Calculator to survive in Argentina</h1>
+            <div class="decorrido">
+                Ingrese cuantos pesos (ARS) gana:
+                <span class="dinero">
+                    <input id="ingreso" type="number" onchange="prueba()">
+                    <label class="signopeso"><span>$</label></span>
+                </span>
+            </div>
+            <div class="decorrido">
+                <p id="clasesocial"></p>
+            </div>
+        </div>
+
+
+        <div class="dos">
+            <div class="gap">
+                Si tu sueldo aumenta un 4% por mes:
+
+                <table id="centre">
+                    <thead id="iniciotabla">
+                    </thead>
+                    <tbody id="tabla">
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="tres">
+            <div class="gap">
+                Si invertis un 20% de tu dinero en plazo fijo del 4% (de forma compuesta) todos los meses:
+
+                <table id="centre" >
+                    <thead id="iniciotabla2">
+                    </thead>
+                    <tbody id="tabla2">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="cuatro">
+            <div class="gap">
+                 <!-- Proximamente compra de dolares :(  -->
+                Si compras dolares con 20% de tu sueldo durante 1 año (con un aumento del 6% en el precio del dolar por mes):
+
+                <table id="centre" >
+                    <thead id="iniciotabla3">
+                    </thead>
+                    <tbody id="tabla3">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/jotaese.js"></script>
+</body>
+
+</html>
