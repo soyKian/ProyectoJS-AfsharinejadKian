@@ -4,6 +4,8 @@ let arraycuadro = [];
 
 function tomarsalario() {
     var dinero = document.getElementById('ingreso').value;
+    let dinerojson = {dinero};
+    sessionStorage.setItem("dinerojson", JSON.stringify(dinerojson));
     let text = "";
 
     if (dinero < 80000) {
@@ -21,13 +23,12 @@ function tomarsalario() {
     }
 
     document.getElementById("clasesocial").innerHTML = text;
-
     return dinero;
-
 }
 
 function prueba() {
-    dinerotemp = tomarsalario();
+    let dinerojson = JSON.parse(sessionStorage.getItem("dinerojson"));
+    dinerotemp=dinerojson.dinero;
 
     /* prueba de si toma correctamente el valor */
     /*    alert(dinerotemp);   */
