@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Metas SEO -->
@@ -19,6 +20,13 @@
 </head>
 
 <body>
+    <button id="bottom-right-button">PRECIO DIVISAS</button>
+
+    <div id="popup" style="display: none;">
+        <p id="resultado"></p>
+        <p> 🔥🔥 Aprovecha que sube! 🔥🔥</p>
+        <button id="close-button">Cerrar</button>
+    </div>
 
     <div id="contenedor-grid">
 
@@ -56,7 +64,7 @@
             <div class="gap">
                 Si invertis un 20% de tu dinero en plazo fijo del 4% (de forma compuesta) todos los meses:
 
-                <table id="centre" >
+                <table id="centre">
                     <thead id="iniciotabla2">
                     </thead>
                     <tbody id="tabla2">
@@ -67,10 +75,11 @@
 
         <div class="cuatro">
             <div class="gap">
-                 <!-- Proximamente compra de dolares :(  -->
-                Si compras dolares con 20% de tu sueldo durante 1 año (con un aumento del 6% en el precio del dolar por mes):
+                <!-- Proximamente compra de dolares :(  -->
+                Si compras dolares con 20% de tu sueldo durante 1 año (con un aumento del 6% en el precio del dolar por
+                mes):
 
-                <table id="centre" >
+                <table id="centre">
                     <thead id="iniciotabla3">
                     </thead>
                     <tbody id="tabla3">
@@ -82,6 +91,7 @@
     </div>
 
     <script src="js/jotaese.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>

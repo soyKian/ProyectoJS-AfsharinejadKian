@@ -27,30 +27,31 @@ h1 {
     color: white;
 }
 
-input{
+input {
     padding-left: 3vw;
 }
-#iniciotabla{
+
+#iniciotabla {
     font-size: 1.2vw;
 }
 
-#iniciotabla2{
+#iniciotabla2 {
     font-size: 1.2vw;
 }
 
-#iniciotabla3{
+#iniciotabla3 {
     font-size: 1.2vw;
 }
 
-#tabla{
+#tabla {
     font-size: 1.2vw;
 }
 
-#tabla2{
+#tabla2 {
     font-size: 1.2vw;
 }
 
-#tabla3{
+#tabla3 {
     font-size: 1.2vw;
 }
 
@@ -63,7 +64,7 @@ select {
     background-color: #73ACDF;
 }
 
-.uno{
+.uno {
     color: white;
 }
 
@@ -87,7 +88,7 @@ select {
     grid-area: uno;
     grid-row-start: 1;
     background-color: #02779E;
-    
+
 }
 
 .dos {
@@ -105,7 +106,7 @@ select {
 .cuatro {
     grid-area: cuatro;
     grid-row-start: 3;
-    background-color:#3d93af;
+    background-color: #3d93af;
     ;
 }
 
@@ -119,27 +120,27 @@ select {
     margin-bottom: 20px;
 }
 
-.dinero{
+.dinero {
     position: relative;
 }
 
-table{
+table {
     border-color: white;
     border: 1px;
 }
 
-.gap{
+.gap {
     margin: 20px 20px 20px 20px;
 }
 
-#centre{
+#centre {
     margin-left: auto;
-  margin-right: auto;
-  padding-top: 1vw;
-  font-size: 2vw;
+    margin-right: auto;
+    padding-top: 1vw;
+    font-size: 2vw;
 }
 
-th{
+th {
     padding-right: 1vw;
 }
 
@@ -147,13 +148,106 @@ th{
     border-collapse: collapse;
     width: 100%;
     font-weight: 300;
-  }
-  
-  #centre td, #centre th {
+}
+
+#centre td,
+#centre th {
     border: 2px solid #02779E;
     padding: 8px;
-  }
-  
-  #centre tr:nth-child(even){background-color: #418ba3;}
-  
-  #centre tr:hover {background-color: #418ba3;}
+}
+
+#centre tr:nth-child(even) {
+    background-color: #418ba3;
+}
+
+#centre tr:hover {
+    background-color: #418ba3;
+}
+
+#bottom-right-button {
+    background-image: url("../img/1.png");
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 15px;
+    font-family: Arial;
+    width: 140px;
+    height: 66px;
+    border-width: 0px;
+    color: #fff;
+    font-weight: bold;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    text-shadow: 1px 1px 0px #2f6627;
+    animation: vibrate 2s ease-in-out infinite;
+    background-color: #369433;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-4px, 4px);
+    }
+
+    40% {
+        transform: translate(-4px, -4px);
+    }
+
+    60% {
+        transform: translate(4px, -4px);
+    }
+
+    80% {
+        transform: translate(4px, 4px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#popup {
+    background-image: url("../img/alberto.gif");
+    background-color: #9fff04;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    z-index: 9999;
+    position: fixed;
+    top: 35vh;
+    left: 35vw;
+    padding: 20px 20px;
+    animation: vibrate 0.3s ease-in-out;
+}
+
+#popup p{
+    color: white;
+    text-shadow: 0 0 22px rgb(0, 0, 0);
+}
+
+
+#close-button {
+    background-color: #081f2d;
+    border-radius: 29px;
+    border: 1px solid #081F2D;
+    color: white;
+    font-size: 15px;
+    padding: 10px 45px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#close-button:hover {
+    background-color: white;
+    color: #081F2D;
+    border-color: #081F2D;
+    transition: 0.3s;
+}

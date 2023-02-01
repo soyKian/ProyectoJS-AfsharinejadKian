@@ -2,10 +2,66 @@ var dinerotemp = 0;
 let arraycuadro = [];
 
 
+    
+
+/************************************************/
+/************************************************/
+
+const popupButton = document.getElementById("bottom-right-button");
+const popup = document.getElementById("popup");
+const closeButton = document.getElementById("close-button");
+
+popupButton.addEventListener("click", function () {
+    popup.style.display = "block";
+});
+
+closeButton.addEventListener("click", function () {
+    popup.style.display = "none";
+});
+
+setTimeout(function () {
+    Toastify({
+        text: "Compra dolar crypto ahora!",
+        offset: {
+          x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+          y: 10 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        destination: "https://binance.com/",
+        style: {
+            background: "linear-gradient(to right, #049fff, #c9ff04)",
+            font: 1,
+        },
+      }).showToast();
+}, 20000); 
+
+
+closeButton.addEventListener("click", function () {
+    popup.style.display = "none";
+});
+
+fetch('https://api.bluelytics.com.ar/v2/latest')
+  .then(response => response.json())
+  .then(data => {
+    const latestDBlue = data.blue.value_sell;
+    const latestEBlue = data.blue_euro.value_sell;
+    const p = document.getElementById("resultado");
+    p.innerHTML = `El valor del dólar blue es: ${latestDBlue} ARS <br> El valor del euro blue es: ${latestEBlue} ARS`;
+  })
+  .catch(error => console.error(error));
+
+
+
+/************************************************/
+/************************************************/
+
+
+
 function tomarsalario() {
     var dinero = document.getElementById('ingreso').value;
-    let dinerojson = {dinero};
+
+    let dinerojson = { dinero };
     sessionStorage.setItem("dinerojson", JSON.stringify(dinerojson));
+
     let text = "";
 
     if (dinero < 80000) {
@@ -27,8 +83,9 @@ function tomarsalario() {
 }
 
 function prueba() {
+    tomarsalario();
     let dinerojson = JSON.parse(sessionStorage.getItem("dinerojson"));
-    dinerotemp=dinerojson.dinero;
+    dinerotemp = dinerojson.dinero;
 
     /* prueba de si toma correctamente el valor */
     /*    alert(dinerotemp);   */
@@ -38,7 +95,7 @@ function prueba() {
     if (dinero = !0) {
         let text = "";
         let text2 = "";
-        let text3= "";
+        let text3 = "";
         let iniciotext = "";
         let iniciotext2 = "";
         let iniciotext3 = "";
@@ -53,16 +110,16 @@ function prueba() {
         var sumadolcomp = 0;
         var dolarcomprado2 = 0;
 
-        iniciotext+="<tr> <th> Mes </th> <th> Ganancia </th> </tr>";
-        iniciotext2+="<tr> <th> Mes </th> <th> Depositas </th> <th> Ganancia </th> <th> Reinvirtiendo </th> </tr>";
-        iniciotext3+="<tr> <th> Mes </th> <th> Valor Dolar </th> <th> Dolar Comprado </th>  <th> Suma de lo Comprado </th> <th> Pesos Disp.</th> <th> Dolar tot a Pesos </th> </tr>";
-        
+        iniciotext += "<tr> <th> Mes </th> <th> Ganancia </th> </tr>";
+        iniciotext2 += "<tr> <th> Mes </th> <th> Depositas </th> <th> Ganancia </th> <th> Reinvirtiendo </th> </tr>";
+        iniciotext3 += "<tr> <th> Mes </th> <th> Valor Dolar </th> <th> Dolar Comprado </th>  <th> Suma de lo Comprado </th> <th> Pesos Disp.</th> <th> Dolar tot a Pesos </th> </tr>";
+
 
         for (i = 1; i < 11; i++) {
             templazofijo = tempo * 0.2;   /* 20% INVERSION SUELDO */
             plazofijo = (plazofijocompuesto + templazofijo) * 0.06;   /* MONTO DE GANANCIA CON EL 6% DE PLAZO FIJO */
             plazofijocompuesto = (plazofijocompuesto + templazofijo) * 1.06; /* MONTO DE DINERO INVERTIDO MAS EL PLAZO FIJO */
-            dolarcompra= (templazofijo/dolar); /* Dolar comprado x mes*/
+            dolarcompra = (templazofijo / dolar); /* Dolar comprado x mes*/
             dolarcomprado = dolarcomprado + Math.trunc(dolarcompra);  /* Suma de los dolares comprados */
             dolarcomprado2 = dolarcomprado2 + dolarcompra;  /* Suma de los dolares comprados */
             sumdolcomp = dolarcomprado * dolar;
@@ -79,16 +136,16 @@ function prueba() {
 
 
             tempo = tempo * 1.04; /* 4% AUMENTO POR MES */
-            dolar = Math.trunc(dolar*1.06); /* Aumento 6% por mes del valor del dolar*/
+            dolar = Math.trunc(dolar * 1.06); /* Aumento 6% por mes del valor del dolar*/
         }
 
         console.log(arraycuadro);
 
-        
-        document.getElementById("iniciotabla").innerHTML = iniciotext; 
-        document.getElementById("iniciotabla2").innerHTML = iniciotext2; 
-        document.getElementById("iniciotabla3").innerHTML = iniciotext3; 
-        document.getElementById("tabla").innerHTML = text;  
+
+        document.getElementById("iniciotabla").innerHTML = iniciotext;
+        document.getElementById("iniciotabla2").innerHTML = iniciotext2;
+        document.getElementById("iniciotabla3").innerHTML = iniciotext3;
+        document.getElementById("tabla").innerHTML = text;
         document.getElementById("tabla2").innerHTML = text2;
         document.getElementById("tabla3").innerHTML = text3;
 
@@ -99,7 +156,7 @@ function prueba() {
 
 
 
-//  VERSION ANTIGUA  
+//  VERSION ANTIGUA
 
 
 // function pruebxxa() {
